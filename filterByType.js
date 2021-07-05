@@ -8,7 +8,7 @@ function filterByType(arr) {
       if (typeof arr[i] == "number") {
           numbers.push(arr[i]);
       } else 
-      if (Number(arr[i])){
+      if (Number(arr[i]) || Number(arr[i]) === 0 ){
         numbersString.push(arr[i]);
       } else 
       if (typeof arr[i] == "string") {
@@ -30,7 +30,7 @@ function filterByType(arr) {
       string
     }
 }
-console.log(filterByType([1,2,"3","abc de","abcdef"]));
+console.log(filterByType([1,2,"0","3","abc de","abcdef"]));
 
 
 // 2-րդ տարբերակ
@@ -46,7 +46,7 @@ function filterByType(arr) {
     if (typeof arr[i] == "number") {
       object.numbers.push(arr[i]);
     } else 
-    if (Number(arr[i])) {
+    if (Number(arr[i]) || Number(arr[i]) == 0) {
       object.numbersString.push(arr[i]);
     } else 
     if (typeof arr[i] == "string" && arr[i].split(" ").join("").length > 5){
@@ -56,5 +56,6 @@ function filterByType(arr) {
   return object;
 }
 
-console.log(filterByType([1,2,"3","abc de","abcdef"]));
+console.log(filterByType([1,2,"0","3","abc de","abcdef"]));
 
+console.log(Number("0"));
