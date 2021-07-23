@@ -7,5 +7,5 @@ function numberDividers(num) {
   }
   return array;
 }
-console.log(numberDividers(100));
+console.log(numberDividers(112));
 
